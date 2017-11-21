@@ -1,0 +1,15 @@
+source https://nuget.org/api/v2
+
+storage:none
+
+nuget Fable.Elmish.HMR
+nuget FSharp.Core
+nuget Fable.Core
+nuget Fable.React
+nuget Fable.Elmish.React
+nuget Fable.Elmish.Browser
+nuget Fable.Elmish.Debugger
+github zaaack/react src/common.fs
+github zaaack/react src/react.fs
+
+clitool dotnet-fable
