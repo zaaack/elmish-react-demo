@@ -26,6 +26,7 @@ let fakeView name =
 
 
 let root model dispatch =
+  printfn "root"
   div
     [ ]
     [ p
@@ -42,8 +43,8 @@ let root model dispatch =
         [ ]
         [ str (sprintf "Hello %s" model.input) ]
       button [ OnClick (fun e -> "" |> ChangeStr |> dispatch) ] [ str "Clean"]
-      fakeView (sprintf "non lazyview: %s" model.lazyView)
-      lazyView fakeView (sprintf "lazyview: %s" model.lazyView)
+      fakeView (sprintf "non lazyview2: %s" model.lazyView)
+      lazyView fakeView (sprintf "lazyview2: %s" model.lazyView)
       button [ OnClick (fun e -> "aa" |> ChangeLazyView |> dispatch) ] [ str "Change Lazyview"]
 
     ]

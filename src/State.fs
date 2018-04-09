@@ -22,16 +22,15 @@ let urlUpdate (result: Option<Page>) model =
   | Some page ->
       { model with currentPage = page }, []
 
-let init result =
+let init state =
   let (counter, counterCmd) = Counter.State.init()
   let (home, homeCmd) = Home.State.init()
-  let (model, cmd) =
-    urlUpdate result
+  let model =
+    // urlUpdate result
       { currentPage = Home
         counter = counter
         home = home }
-  model, Cmd.batch [ cmd
-                     Cmd.map CounterMsg counterCmd
+  model, Cmd.batch [ Cmd.map CounterMsg counterCmd
                      Cmd.map HomeMsg homeCmd ]
 
 let update msg model =

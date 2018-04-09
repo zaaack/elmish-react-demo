@@ -9,7 +9,6 @@ nuget Fable.React
 nuget Fable.Elmish.React
 nuget Fable.Elmish.Browser
 nuget Fable.Elmish.Debugger
-github zaaack/react src/common.fs
-github zaaack/react src/react.fs
-
+nuget FSharp.Compiler.Service 22.0.3
+nuget FSharp.Data.GraphQL.Client 0.0.3-beta
 clitool dotnet-fable

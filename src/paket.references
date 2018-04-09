@@ -2,7 +2,8 @@ FSharp.Core
 Fable.Core
 Fable.Elmish.Browser
 Fable.Elmish.Debugger
-Fable.Elmish.HMR
 Fable.Elmish.React
+Fable.Elmish.HMR
 dotnet-fable
 Fable.React
+FSharp.Data.GraphQL.Client

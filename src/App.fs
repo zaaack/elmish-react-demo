@@ -10,6 +10,10 @@ open Fable.Import.Browser
 open Types
 open App.State
 open Global
+open FSharp.Data.GraphQL
+
+type GraphQlClient = GraphQLProvider<" https://api.graph.cool/simple/v1/swapi">
+
 
 importAll "../sass/main.sass"
 
@@ -71,7 +75,12 @@ open Elmish.HMR
 
 // App
 Program.mkProgram init update root
+|> Program.toNavigable (parseHash pageParser) urlUpdate
+//-:cnd:noEmit
+#if DEBUG
 |> Program.withDebugger
 |> Program.withHMR
+#endif
+//+:cnd:noEmit
 |> Program.withReact "elmish-app"
 |> Program.run

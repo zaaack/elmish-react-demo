@@ -3,8 +3,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="../paket-files/zaaack/react/src/common.fs" />
-    <Compile Include="../paket-files/zaaack/react/src/react.fs" />
+    <Compile Include="./Fable.Import.RemoteDev.fs" />
+    <Compile Include="./debugger.fs" />
+
     <!-- Global to the app -->
     <Compile Include="Global.fs" />
     <!-- Info -->
